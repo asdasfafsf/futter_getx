@@ -7,4 +7,5 @@ class CountControllerWithProvider extends ChangeNotifier {
     count++;
     notifyListeners();
   }
+  
 }
