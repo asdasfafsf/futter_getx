@@ -16,6 +16,15 @@ class WithGetX extends StatelessWidget {
     );
   }
 
+  Widget _putButton(String id, int value) {
+    return RaisedButton(
+      child: Text('+'),
+      onPressed: () {
+        Get.find<CountControllerWithGetx>().putNumber(id, value);
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
