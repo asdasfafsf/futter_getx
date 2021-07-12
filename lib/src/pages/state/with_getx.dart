@@ -20,7 +20,7 @@ class WithGetX extends StatelessWidget {
     return RaisedButton(
       child: Text('+'),
       onPressed: () {
-        Get.find<CountControllerWithGetx>().putNumber(id, value);
+        Get.find<CountControllerWithGetx>().putNumber(id, value.obs);
       },
     );
   }

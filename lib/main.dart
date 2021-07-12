@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx1/src/pages/named/first.dart';
 import 'package:getx1/src/pages/named/second.dart';
+import 'src/binding/binding_page.dart';
+import 'src/controller/count_controller_with_getx.dart';
 import 'src/home.dart';
+import 'src/pages/binding.dart';
 import 'src/pages/next.dart';
 import 'src/pages/user.dart';
 
@@ -40,7 +43,12 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/user/:uid',
-          page: () => UserPage(),
+          page: () => UserPage()
+        ),
+        GetPage(
+          name: '/binding',
+          page: () => BindingPage(),
+          binding: BindingPageBinding(),
         ),
       ],
     );
